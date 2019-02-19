@@ -157,7 +157,7 @@ public class VideoActivity extends AppCompatActivity {
     private void startActivityFromCamera() {
         mVideoConfig.isImgFromCamera = true;
         Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
-        intent.putExtra(MediaStore.EXTRA_SIZE_LIMIT, 78643200L);
+        intent.putExtra(MediaStore.EXTRA_DURATION_LIMIT, 30);
         mVideoUri = FileProvider.getUriForFile(this, this.getApplicationContext().getPackageName() + ".provider", destination);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, mVideoUri);
         startActivityForResult(Intent.createChooser(intent, "Select Video"), VideoTags.IntentCode.CAMERA_REQUEST);
