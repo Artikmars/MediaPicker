@@ -80,6 +80,12 @@ public class VideoPicker {
         }
 
         @Override
+        public VideoPicker.Builder videoCaptureLimit(int limit) {
+            this.imageConfig.videoCaptureLimit = limit;
+            return this;
+        }
+
+        @Override
         public Builder requestCode(int requestCode) {
             this.imageConfig.requestCode = requestCode;
             return this;
@@ -97,7 +103,6 @@ public class VideoPicker {
         }
 
     }
-
 
     public enum Extension {
         MP4(".mp4");

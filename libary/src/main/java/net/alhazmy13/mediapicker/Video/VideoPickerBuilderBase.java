@@ -16,6 +16,8 @@ public interface VideoPickerBuilderBase {
 
     VideoPicker.Builder enableDebuggingMode(boolean debug);
 
+    VideoPicker.Builder videoCaptureLimit(int limit);
+
     VideoPicker.Builder requestCode(int requestCode);
 
     VideoPicker build();

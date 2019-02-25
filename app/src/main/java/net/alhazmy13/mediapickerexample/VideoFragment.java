@@ -62,6 +62,7 @@ public class VideoFragment extends Fragment {
                 .directory(VideoPicker.Directory.DEFAULT)
                 .extension(VideoPicker.Extension.MP4)
                 .enableDebuggingMode(true)
+                .videoCaptureLimit(30)
                 .build();
     }
 

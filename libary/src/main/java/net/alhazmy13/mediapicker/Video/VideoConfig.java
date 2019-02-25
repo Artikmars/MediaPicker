@@ -13,6 +13,7 @@ class VideoConfig implements Serializable {
     protected VideoPicker.Extension extension;
     protected VideoPicker.Mode mode;
     protected String directory;
+    protected int videoCaptureLimit;
     protected boolean allowMultiple;
     protected boolean isImgFromCamera;
     protected boolean debug;
@@ -24,6 +25,7 @@ class VideoConfig implements Serializable {
         this.mode = VideoPicker.Mode.CAMERA;
         this.directory = Environment.getExternalStorageDirectory() + VideoTags.Tags.IMAGE_PICKER_DIR;
         this.allowMultiple = false;
+        this.videoCaptureLimit = 0;
     }
 
     @Override
